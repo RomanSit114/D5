@@ -11,7 +11,7 @@ from .forms import RegisterForm
 class RegisterView(CreateView):
     model = User
     form_class = RegisterForm
-    template_name = 'sign/register.html'
+    template_name = 'sign/signup.html'
     success_url = '/'
 
 
@@ -27,7 +27,7 @@ class LoginView(FormView):
         user = authenticate(self.request, username=username, password=password)
         if user is not None:
             login(self.request, user)
-            form.save() # добавил chatgpt
+            # form.save() # добавил chatgpt
         return super().form_valid(form)
 
 
