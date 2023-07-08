@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django import forms
 from django.forms import ModelForm
 from django.contrib.auth.models import Group
+from allauth.account.forms import SignupForm
 
 
 class RegisterForm(UserCreationForm):
@@ -40,3 +41,5 @@ class LoginForm(AuthenticationForm):
          "username",
          "password",
            )
+
+
